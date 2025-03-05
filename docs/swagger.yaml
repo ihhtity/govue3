@@ -1,0 +1,150 @@
+basePath: /api/v1
+definitions:
+  models.User:
+    type: object
+info:
+  contact: {}
+  description: Govue3 项目API文档
+  title: Govue3 API
+  version: "1.0"
+paths:
+  /auth/login:
+    post:
+      consumes:
+      - application/json
+      parameters:
+      - description: 用户名
+        in: body
+        name: username
+        required: true
+        schema:
+          type: string
+      - description: 密码
+        in: body
+        name: password
+        required: true
+        schema:
+          type: string
+      produces:
+      - application/json
+      responses:
+        "200":
+          description: 登录成功
+          schema:
+            type: string
+      summary: 用户登录
+      tags:
+      - Auth
+  /auth/refresh:
+    post:
+      consumes:
+      - application/json
+      produces:
+      - application/json
+      responses:
+        "200":
+          description: Token刷新成功
+          schema:
+            type: string
+      summary: 刷新Token
+      tags:
+      - Auth
+  /auth/register:
+    post:
+      consumes:
+      - application/json
+      parameters:
+      - description: 用户名
+        in: body
+        name: username
+        required: true
+        schema:
+          type: string
+      - description: 密码
+        in: body
+        name: password
+        required: true
+        schema:
+          type: string
+      produces:
+      - application/json
+      responses:
+        "200":
+          description: 注册成功
+          schema:
+            type: string
+      summary: 用户注册
+      tags:
+      - Auth
+  /users/{id}:
+    delete:
+      consumes:
+      - application/json
+      operationId: delete-user
+      parameters:
+      - description: User ID
+        in: path
+        name: id
+        required: true
+        type: integer
+      produces:
+      - application/json
+      responses:
+        "200":
+          description: successful operation
+          schema:
+            type: string
+        "404":
+          description: User not found
+          schema:
+            type: string
+      tags:
+      - users
+    get:
+      consumes:
+      - application/json
+      operationId: get-user-by-id
+      parameters:
+      - description: User ID
+        in: path
+        name: id
+        required: true
+        type: integer
+      produces:
+      - application/json
+      responses:
+        "200":
+          description: successful operation
+          schema:
+            type: string
+        "404":
+          description: User not found
+          schema:
+            type: string
+      tags:
+      - users
+    put:
+      consumes:
+      - application/json
+      operationId: update-user
+      parameters:
+      - description: User object
+        in: body
+        name: user
+        required: true
+        schema:
+          $ref: '#/definitions/models.User'
+      produces:
+      - application/json
+      responses:
+        "200":
+          description: successful operation
+          schema:
+            type: string
+        "400":
+          description: Invalid user object
+          schema:
+            type: string
+      tags:
+      - users
+swagger: "2.0"

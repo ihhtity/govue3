@@ -1,0 +1,10 @@
+{"level":"info","ts":1741072686.9421437,"caller":"middleware/logger.go:18","msg":"请求日志","status":200,"method":"POST","path":"/api/auth/login","query":"","ip":"::1","user-agent":"PostmanRuntime/7.29.0","latency":0.0038391}
+{"level":"info","ts":1741073038.1629455,"caller":"middleware/logger.go:18","msg":"请求日志","status":200,"method":"GET","path":"/api/health","query":"","ip":"::1","user-agent":"PostmanRuntime/7.29.0","latency":0.0056589}
+{"level":"info","ts":1741073261.0873263,"caller":"middleware/logger.go:18","msg":"请求日志","status":200,"method":"GET","path":"/api/swagger/index.html","query":"","ip":"::1","user-agent":"PostmanRuntime/7.29.0","latency":0,"start_time":"2025-03-04 15:27:41"}
+{"level":"error","ts":1741074917.2917945,"caller":"middleware/logger.go:22","msg":"请求失败","status":404,"method":"POST","path":"/api/auth/logins","query":"","ip":"::1","user-agent":"PostmanRuntime/7.29.0","latency":0,"start_time":"2025-03-04 15:55:17"}
+{"level":"error","ts":1741074953.7283347,"caller":"middleware/logger.go:22","msg":"请求失败","status":404,"method":"POST","path":"/api/auth/index","query":"","ip":"::1","user-agent":"PostmanRuntime/7.29.0","latency":0,"start_time":"2025-03-04 15:55:53"}
+{"level":"error","ts":1741077556.8615518,"caller":"middleware/logger.go:22","msg":"请求失败","status":404,"method":"POST","path":"/api/auth/index","query":"","ip":"::1","user-agent":"PostmanRuntime/7.29.0","latency":0,"start_time":"2025-03-04 16:39:16"}
+{"level":"info","ts":1741079580.159504,"caller":"utils/helper.go:75","msg":"正在关闭服务..."}
+{"level":"info","ts":1741079580.1606097,"caller":"utils/helper.go:84","msg":"服务已关闭"}
+{"level":"info","ts":1741079611.1357338,"caller":"utils/helper.go:75","msg":"正在关闭服务..."}
+{"level":"info","ts":1741079611.1362545,"caller":"utils/helper.go:84","msg":"服务已关闭"}

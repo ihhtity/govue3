@@ -1,0 +1,16 @@
+server:
+  port: ":8080"
+  mode: "debug"
+
+database:
+  mysql: "root:123456@tcp(localhost:3306)/gin?charset=utf8mb4&parseTime=True&loc=Local"
+  redis: "localhost:6379"
+  redis_password: "123456"
+  mongodb: "mongodb://localhost:27017"
+
+jwt:
+  secret: "d2f5b8e3a9c7d1e5f6b9a8c7d2e5f3b1"
+  expire: 3600
+
+swagger:
+  enabled: true
